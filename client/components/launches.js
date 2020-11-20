@@ -37,7 +37,7 @@ export const GET_LAUNCHES = gql`
   }
 `;
 
-export default function launches() {
+const Launches = () => {
   const { data, loading, error } = useQuery(GET_LAUNCHES);
 
   if (loading) return <Text>Loading...</Text>;
@@ -58,4 +58,6 @@ export default function launches() {
         })}
     </View>
   );
-}
+};
+
+export default Launches;
